@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import { FilterItem } from './filter-item/FilterItem'
 import "./Filter.css"
 
@@ -15,6 +15,10 @@ export const Filter = () => {
         { title: 'Huawei' },
     ]
 
+    useEffect(() => {
+        console.log('render');
+    }, [])
+
     const stock = [
         { title: 'В наличии' },
         { title: 'Под заказ: сегодня' },
@@ -28,12 +32,8 @@ export const Filter = () => {
 
     const handleClick = (event) => {
         let position = event.getBoundingClientRect()
-        setPosition(position.y)
+        setPosition(position.y + scrollY) 
         setIsActive(false)
-
-        setTimeout(() => {
-            setIsActive(true)
-        }, 2000)
     }
 
     return (
@@ -47,7 +47,7 @@ export const Filter = () => {
                     <button className="btn-main">Применить</button>
                     <button className="btn-drop">Сбросить</button>
                 </div>
-                <div className={isActive ? "filters-float-btn" : "filters-float-btn btn-active"} onClick={() => console.log('Самый лучший программист')} style={{ top: `${position - 96}px` }}></div>
+                <div className={isActive ? "filters-float-btn" : "filters-float-btn btn-active"} onClick={() => { console.log('Самый лучший программист')}} style={{ top: `${position - 96}px` }}></div>
             </div>
         </>
     )

@@ -113,15 +113,11 @@
     text-align: center;
     width: 120px;
     opacity: 0;
-    animation-delay: 55s;
 }
 
 .btn-active {
     opacity: 1;
 }
-
-
-
 
 .filters-float-btn:before {
     background-image: linear-gradient(45deg, #fc8507, #ffa218);
