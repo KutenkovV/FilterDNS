@@ -2,11 +2,16 @@
   "name": "project",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://kutenkovv.github.io/FilterDNS/",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "eject": "react-scripts eject",
+    "deploy": "gh-pages -d build",
+    "predeploy": "npm run build"
+
   },
   "dependencies": {
     "@types/node": "20.4.2",
