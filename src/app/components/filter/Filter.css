@@ -1,0 +1,214 @@
+@import url(//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css);
+
+.filters {
+    position: relative;
+    width: 17.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .16);
+    margin: 4rem;
+}
+
+.collapse-dropdown {
+    display: flex;
+    font-family: PT Sans, Helvetica, Arial, sans-serif;
+    padding: 8px 24px 8px 13px;
+    cursor: pointer;
+    align-items: center;
+}
+
+.collapse-dropdown::before {
+    content: "\f078";
+    font-family: FontAwesome;
+    margin-right: 8px;
+}
+
+.collapse-dropdown.active::before {
+    transform: rotate(180deg);
+}
+
+.active {
+    color: #fc8507;
+}
+
+.collapse-dropdown:hover {
+    background-color: #fff7da;
+    color: #fc8507;
+}
+
+.checkbox-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.checkbox {
+    position: relative;
+    padding: 8px 0 8px 38px;
+}
+
+.checkbox {
+    color: #333;
+    cursor: pointer;
+    display: block;
+    font-size: 16px;
+    padding: 8px 0 8px 23px;
+    padding-left: 45px;
+    position: relative;
+}
+
+.checkbox__input {
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+}
+
+.checkbox__box {
+    position: absolute;
+    background: #fff;
+    border: 1px solid #afafaf;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 16px;
+    left: 15px;
+    top: 10px;
+    transition: all .25s;
+    width: 16px;
+}
+
+.checkbox:hover {
+    background-color: #fff7da;
+}
+
+.checkbox__input:checked+.checkbox__box {
+    background-color: #fc8507;
+    border: 6px solid #fc8507;
+}
+
+.checkbox__input:checked+.checkbox__box:after {
+    box-sizing: content-box;
+    position: absolute;
+    color: #fff;
+    content: "\f00c";
+    font-family: FontAwesome;
+    left: -5px;
+    top: -6px;
+}
+
+.filters-float-btn {
+    position: absolute;
+    background-image: linear-gradient(0deg, #fc8507, #ffa218);
+    border: none;
+    /* По хорошему тоже нада как-то зависимость делать от размеров */
+    left: 285px;
+    border-radius: 8px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    height: 64px;
+    line-height: 64px;
+    outline: none;
+    text-align: center;
+    width: 120px;
+    /* opacity: 0; */
+}
+
+
+.filters-float-btn:before {
+    background-image: linear-gradient(45deg, #fc8507, #ffa218);
+    border-radius: 4px;
+    content: "";
+    display: block;
+    height: 45px;
+    left: -5px;
+    position: absolute;
+    top: 10px;
+    transform: rotate(135deg);
+    width: 45px;
+    z-index: 0;
+}
+
+.filters-float-btn:after {
+    opacity: 1;
+    background-image: inherit;
+    border-radius: inherit;
+    box-shadow: inherit;
+    content: 'Показать';
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.filters-float-btn:hover {
+    background-image: linear-gradient(45deg, #fc8507, #ec7615);
+}
+
+.list-collapse {
+    border-bottom: 1px solid #eaeaea;
+}
+
+.input-search {
+    background: #f2f2f2;
+    border-radius: 8px;
+    font-size: 14px;
+    height: 40px;
+    line-height: 40px;
+    margin: 0.75rem 16px 0px 16px;
+    position: relative;
+}
+
+.input-search__input {
+    background: #f2f2f2;
+    border: none;
+    border-radius: 8px;
+    color: #333;
+    height: 34px;
+    outline: none;
+    width: 100%;
+}
+
+.filters-buttons {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+button {
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 38px;
+    padding: 0;
+    transition: all 0.1s;
+}
+
+
+.btn-main {
+    background-image: linear-gradient(0deg, #fc8507, #ffa218);
+    border-color: #fc8507 transparent #ffa218;
+    border-style: solid;
+    border-width: 1px;
+    font-weight: 700;
+}
+
+.btn-drop {
+    margin-top: 0.25rem;
+    color: #333;
+    background: #fff;
+    border: 1px solid #d9d9d9;
+}
+
+.btn-main:hover {
+    background-image: linear-gradient(0deg, #e67e0f, #ef9610);
+}
+
+.btn-drop:hover {
+    background: #ece9e9;
+}
