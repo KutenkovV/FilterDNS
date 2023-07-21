@@ -23,11 +23,17 @@ export const Filter = () => {
         { title: 'Отсутствующие в продаже' },
     ]
 
+    const [isActive, setIsActive] = useState(true)
     const [position, setPosition] = useState(0)
 
     const handleClick = (event) => {
         let position = event.getBoundingClientRect()
         setPosition(position.y)
+        setIsActive(false)
+
+        setTimeout(() => {
+            setIsActive(true)
+        }, 2000)
     }
 
     return (
@@ -41,7 +47,7 @@ export const Filter = () => {
                     <button className="btn-main">Применить</button>
                     <button className="btn-drop">Сбросить</button>
                 </div>
-                <div className="filters-float-btn" onClick={() => console.log('Самый лучший программист')} style={{ top: `${position - 96}px` }}></div>
+                <div className={isActive ? "filters-float-btn" : "filters-float-btn btn-active"} onClick={() => console.log('Самый лучший программист')} style={{ top: `${position - 96}px` }}></div>
             </div>
         </>
     )

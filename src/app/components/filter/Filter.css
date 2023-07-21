@@ -112,8 +112,15 @@
     outline: none;
     text-align: center;
     width: 120px;
-    /* opacity: 0; */
+    opacity: 0;
+    animation-delay: 55s;
 }
+
+.btn-active {
+    opacity: 1;
+}
+
+
 
 
 .filters-float-btn:before {
@@ -130,8 +137,13 @@
     z-index: 0;
 }
 
+.checkbox__input:checked+.filters-float-btn {
+    background-image: linear-gradient(45deg, #56f7ff, #18a0f5);
+    border: 2px solid red;
+
+}
+
 .filters-float-btn:after {
-    opacity: 1;
     background-image: inherit;
     border-radius: inherit;
     box-shadow: inherit;

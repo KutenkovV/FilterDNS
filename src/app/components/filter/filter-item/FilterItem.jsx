@@ -23,7 +23,7 @@ export const FilterItem = (props) => {
                                         <span>{item.title}</span>
                                         <input onClick={(event) => {
                                             handleClick(event.target)
-                                        }} className="checkbox__input" id={idx} type="checkbox" value="idx" />
+                                        }} className="checkbox__input" type="checkbox" value="idx" />
                                         <span className="checkbox__box"></span>
                                     </label>
                                 )}
